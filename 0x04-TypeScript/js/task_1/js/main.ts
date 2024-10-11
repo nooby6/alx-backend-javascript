@@ -17,3 +17,17 @@ const teacher3: Teacher = {
 
 console.log(teacher3);
 
+
+// Define the printTeacherFunction interface
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+// Implement the printTeacher function
+const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => {
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
+
+// Example usage
+console.log(printTeacher("Audrine", "Whrite"));  // Output: A. Whrite
+
