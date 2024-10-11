@@ -44,11 +44,25 @@ class Teacher implements TeacherInterface {
 
 // Function to create either a Director or a Teacher based on the salary
 function createEmployee(salary: number | string): Director | Teacher {
-  if (typeof salary === 'number' && salary < 500) {
+// isDirector function to check if an employee is a Director
+function isDirector(employee: Director | Teacher): employee is Director {
+  return employee instanceof Director;
+}
+
+// executeWork function that calls different methods based on employee type
+function executeWork(employee: Director | Teacher): void {
+  if (isDirector(employee)) {
+    console.log(employee.workDirectorTasks());
+  } else {
+    console.log(employee.workTeacherTasks());
+  }
+}  if (typeof salary === 'number' && salary < 500) {
     return new Teacher();
   }
   return new Director();
 }
+
+
 
 // Testing the createEmployee function
 console.log(createEmployee(200)); // Should return a Teacher
