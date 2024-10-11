@@ -62,10 +62,40 @@ function executeWork(employee: Director | Teacher): void {
   return new Director();
 }
 
+// String literal type Subjects which allows 'Math' or 'History' only
+type Subjects = 'Math' | 'History';
+
+// Function teachClass
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  } else if (todayClass === 'History') {
+    return 'Teaching History';
+  }
+}
+
+// Testing the function
+console.log(teachClass('Math'));    // Should print "Teaching Math"
+console.log(teachClass('History')); // Should print "Teaching History"
 
 
 // Testing the createEmployee function
 console.log(createEmployee(200)); // Should return a Teacher
 console.log(createEmployee(1000)); // Should return a Director
 console.log(createEmployee('$500')); // Should return a Director
+// String literal type Subjects which allows 'Math' or 'History' only
+type Subjects = 'Math' | 'History';
+
+// Function teachClass
+function teachClass(todayClass: Subjects): string {
+	  if (todayClass === 'Math') {
+		      return 'Teaching Math';
+		        } else if (todayClass === 'History') {
+				    return 'Teaching History';
+				      }
+}
+
+// Testing the function
+console.log(teachClass('Math'));    // Should print "Teaching Math"
+console.log(teachClass('History')); // Should print "Teaching History"
 
