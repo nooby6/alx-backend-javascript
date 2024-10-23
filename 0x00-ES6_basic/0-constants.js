@@ -1,3 +1,6 @@
+//unction taskFirst to instantiate variables using const
+//function taskNext to instantiate variables using let
+
 export function taskFirst() {
   var task = 'I prefer const when I can.';
   return task;
