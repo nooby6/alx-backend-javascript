@@ -1,8 +1,8 @@
-//unction taskFirst to instantiate variables using const
-//function taskNext to instantiate variables using let
+// Function taskFirst to instantiate variables using const
+// Function taskNext to instantiate variables using let
 
 export function taskFirst() {
-  var task = 'I prefer const when I can.';
+  const task = 'I prefer const when I can.';  // Replaced var with const
   return task;
 }
 
@@ -11,8 +11,8 @@ export function getLast() {
 }
 
 export function taskNext() {
-  var combination = 'But sometimes let';
-  combination += getLast();
+  let combination = 'But sometimes let';  // Replaced var with let
+  combination += getLast();  // combination is updated, so let is appropriate here
 
   return combination;
 }
