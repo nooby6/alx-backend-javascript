@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Mocha to write a test suite Assertion libraries (Node or Chai) Spies and stubs Hooks Integration tests",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "mocha"
   },
