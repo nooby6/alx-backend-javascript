@@ -1,3 +1,4 @@
+// Execute: npm run test
 /**
  * Performs a calculation based on the given type and two numbers.
  *
@@ -8,22 +9,22 @@
  * @throws {Error} If the type is not one of 'SUM', 'SUBTRACT', or 'DIVIDE'.
  */
 function calculateNumber(type, a, b) {
-    const roundedA = Math.round(a);
-    const roundedB = Math.round(b);
-  
-    if (type === 'SUM') {
+  const roundedA = Math.round(a);
+  const roundedB = Math.round(b);
+
+  if (type === 'SUM') {
       return roundedA + roundedB;
-    } else if (type === 'SUBTRACT') {
+  } else if (type === 'SUBTRACT') {
       return roundedA - roundedB;
-    } else if (type === 'DIVIDE') {
+  } else if (type === 'DIVIDE') {
       if (roundedB === 0) {
-        return 'Error';
+          return 'Error';
       }
       return roundedA / roundedB;
-    } else {
+  } else {
       throw new Error('Invalid operation type');
-    }
   }
-  
-  module.exports = calculateNumber;
-  
+}
+
+// Exporting using CommonJS
+module.exports = calculateNumber;
