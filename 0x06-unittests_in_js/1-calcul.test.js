@@ -40,6 +40,10 @@ describe('calculateNumber', () => {
         it('should return "Error" when dividing 1.4 by 0', () => {
             assert.strictEqual(calculateNumber('DIVIDE', 1.4, 0), 'Error');
         });
+
+        it('should return -3 when adding -1.4 and -2.5', () => {
+            assert.strictEqual(calculateNumber('SUM', -1.4, -2.5), -3);
+          });
     });
 
     // Test cases for invalid operation types
