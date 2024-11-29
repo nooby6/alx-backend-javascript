@@ -1,4 +1,5 @@
-import { expect } from 'chai';
+import chai from 'chai';
+const { expect } = chai;
 import calculateNumber from './2-calcul_chai.js';
 
 // Test suite for the calculateNumber function
